@@ -72,7 +72,7 @@ This files will be imported by visual studio, and contain the properties and inc
     <ItemDefinitionGroup>
     <ClCompile>   
         <!-- This is the most important: -->
-        <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\native\lib</AdditionalIncludeDirectories>
+        <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\native\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(PackageLibraries);%(AdditionalDependencies) 
@@ -91,7 +91,7 @@ This files will be imported by visual studio, and contain the properties and inc
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
 <PropertyGroup>
     <ClCompile>
-        <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\native\lib</AdditionalIncludeDirectories>
+        <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\native\lib%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
 </PropertyGroup>
 </Project>
